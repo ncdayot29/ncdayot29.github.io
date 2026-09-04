@@ -21,11 +21,11 @@ Google Fonts - Plus Jakarta Sans & Playfair Display
 
 ---
 
-📂 Repository Structure
+Repository Structure
 
 text
-├── index.html        # Main Portfolio Page
-├── resume.html       # Single-Page Printable Resume
-├── style.css         # Styling for Portfolio
-├── image/            # Images (Profile, Projects, Certificates)
-└── documents/        # Downloadable Resume PDF
+├── index.html         Main Portfolio Page
+├── resume.html        Single-Page Printable Resume
+├── style.css          Styling for Portfolio
+├── image/             Images (Profile, Projects, Certificates)
+└── documents/         Downloadable Resume PDF
