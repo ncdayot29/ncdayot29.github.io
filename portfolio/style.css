@@ -1,0 +1,310 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap');
+
+/* Color Variables */
+:root {
+    --bg-color: #fff6f8;
+    --card-bg: #ffffff;
+    --accent-pink: #f472b6;
+    --soft-rose: #fbcfe8;
+    --deep-berry: #831843;
+    --text-main: #4a3e3d;
+    --text-muted: #785e5e;
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --shadow-soft: 0 10px 30px -5px rgba(244, 114, 182, 0.15);
+    --shadow-hover: 0 15px 35px -5px rgba(244, 114, 182, 0.28);
+}
+
+/* Base Reset & Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.7;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(251, 207, 232, 0.4) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(244, 114, 182, 0.15) 0%, transparent 25%);
+    background-attachment: fixed;
+}
+
+a {
+    color: var(--accent-pink);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--deep-berry);
+}
+
+/* Header & Floating Navigation */
+header {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(251, 207, 232, 0.5);
+    padding: 1.2rem 2rem;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--deep-berry);
+    letter-spacing: 0.5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    color: var(--accent-pink);
+}
+
+/* Container Structure */
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem;
+}
+
+.bg-light {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--deep-berry);
+    margin-bottom: 1.8rem;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--soft-rose), transparent);
+    border-radius: 2px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 5rem 1.5rem 3rem;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.2rem;
+    border: 4px solid #ffffff;
+    box-shadow: 0 8px 25px rgba(245, 50, 151, 0.3);
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--deep-berry);
+}
+
+.highlight {
+    color: var(--accent-pink);
+    font-style: italic;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin: 0.5rem 0 1rem;
+}
+
+/* Cards & Layout Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid rgba(251, 207, 232, 0.6);
+    border-radius: 18px;
+    padding: 1.8rem;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card h3 {
+    color: var(--deep-berry);
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.card ul {
+    list-style-type: '✨ ';
+    padding-left: 1.2rem;
+}
+
+.card li {
+    margin-bottom: 0.4rem;
+}
+
+/* Project Cards Specifics */
+.project-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.project-links .btn {
+    margin-top: 0;
+}
+
+/* Certificate Cards Styling */
+.cert-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cert-card img.cert-img {
+    width: 100%;
+    max-width: 220px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    border: 2px solid var(--soft-rose);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.cert-card img.cert-img:hover {
+    transform: scale(1.05);
+}
+
+.cert-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.cert-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.cert-card .btn-link {
+    display: inline-block;
+    margin-top: 0.8rem;
+}
+
+/* Buttons & Links */
+.btn {
+    display: inline-block;
+    margin-top: 1.2rem;
+    padding: 0.65rem 1.4rem;
+    background: linear-gradient(135deg, var(--accent-pink), #f43f5e);
+    color: #ffffff !important;
+    font-weight: 600;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(244, 114, 182, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(244, 114, 182, 0.6);
+    text-decoration: none;
+}
+
+.btn-link {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--deep-berry);
+    padding: 0.4rem 0.6rem;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.btn-link:hover {
+    background-color: var(--soft-rose);
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--card-bg);
+    color: var(--text-muted);
+    border-top: 1px solid rgba(251, 207, 232, 0.5);
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
